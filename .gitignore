@@ -3,7 +3,7 @@
 
 # Allow specific file extensions
 !*.cpp
-!*.h
+!*.
 
 # Allow the .gitignore file itself
 !.gitignore
