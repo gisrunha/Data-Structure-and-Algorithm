@@ -1,38 +1,32 @@
-
-// #include <bits\stdc++.h>
-#include <iostream>
-#include <vector>
-
-
-// int rev(int x)
-// {
-//   int num = 0;
-//   while (x != 0)
-//   {
-//     num = (num * 10) + (x % 10);
-//     x /= 10;
-//   }
-//   return num;
-// }
+#include <bits\stdc++.h>
 
 using namespace std;
 
-int main() {
+int countDistinctIntegers(vector<int> &nums)
+{
+  set<int> new_arr;
+  int l = nums.size();
+  for (int i = 0; i < l; i++)
+  {
+    int y = nums[i];
+    new_arr.insert(y);
 
-    vector<int> listt = {1,13,10,12,31};
-
-    for (int i = 0, l = listt.size(); i < l; i++)
+    int num = 0;
+    while (y != 0)
     {
-      int y = listt[i];
-      cout << (y)+"\n";
-      // listt.push_back(rev(y));
+      num = (num * 10) + (y % 10);
+      y /= 10;
     }
+    new_arr.insert(num);
+  }
 
-    // for (int x : listt)
-    // {
-    //   cout << x+"\n";
-    // }
-  
-  return 0;
+  return new_arr.size();
 }
 
+int main()
+{
+  vector<int> arr = {1,13,10,12,31};
+  cout << countDistinctIntegers(arr);
+
+  return 0;
+}

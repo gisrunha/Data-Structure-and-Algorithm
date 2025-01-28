@@ -1,10 +1,7 @@
-# Ignore everything
-*
+# ignore file extension
+*.exe
+*.txt
+.json
 
-# Allow specific file extensions
-!*.cpp
-!*.c
-!Data Structure and Algorithms/
-
-# Allow the .gitignore file itself
-!.gitignore
+# ignore directory
+.vscode/
