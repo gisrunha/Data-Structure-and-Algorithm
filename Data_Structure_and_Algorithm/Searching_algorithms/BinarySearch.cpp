@@ -1,6 +1,7 @@
 #include <bits\stdc++.h>
 
 using namespace std;
+// The time complexity of binary search is O(log n)
 
 // Function to perform binary search
 int binarySearch(vector<int> vec, int target)
